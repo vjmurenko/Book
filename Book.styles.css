@@ -1,0 +1,48 @@
+/* /Layout/MainLayout.razor.rz.scp.css */
+.backgroundDark[b-pk5zeh9n0f]{
+    color: white;
+    background-color: black;
+}
+
+.backgroundPaper[b-pk5zeh9n0f]{
+    background-color: #b7ad2e2e;
+}
+/* /Pages/Index.razor.rz.scp.css */
+{
+    font-family: "Cambria Math"
+;
+    panose-1: 2 4 5 3 5 4 6 3 2 4
+;
+}
+@font-face {
+    font-family: Calibri;
+    panose-1: 2 15 5 2 2 2 4 3 2 4;
+}
+
+/* Style Definitions */
+p.MsoNormal[b-qnegzny3e9], li.MsoNormal[b-qnegzny3e9], div.MsoNormal[b-qnegzny3e9] {
+    margin-top: 0cm;
+    margin-right: 0cm;
+    margin-bottom: 8.0pt;
+    margin-left: 0cm;
+    line-height: 107%;
+    font-family: "Calibri", sans-serif;
+}
+
+.MsoChpDefault[b-qnegzny3e9] {
+    font-family: "Calibri", sans-serif;
+}
+
+.MsoPapDefault[b-qnegzny3e9] {
+    margin-bottom: 8.0pt;
+    line-height: 107%;
+}
+
+@page WordSection1 {
+    size: 595.3pt 841.9pt;
+    margin: 2.0cm 42.5pt 2.0cm 3.0cm;
+}
+
+div.WordSection1[b-qnegzny3e9] {
+    page: WordSection1;
+}
