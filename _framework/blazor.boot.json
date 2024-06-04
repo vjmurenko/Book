@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Book",
   "resources": {
-    "hash": "sha256-62whdRtKzP06DYimjgLC1PGqn6IXS5Znio9p4t6mMk8=",
+    "hash": "sha256-tZyy3o0+6AGGImBN/K1H3dkcQ3BUGKJqzoTrAOC6Yik=",
     "jsModuleNative": {
       "dotnet.native.8.0.6.5gvb9vqyci.js": "sha256-oXccQn9rICGrmJCU3+W/8JiZeUiNSyNwKlDJJuHaJHs="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "Book.wasm": "sha256-hOfNg5WWrQktgViqbAUmqUPdjB20qnAljqPM1PzP8vk=",
+      "Book.wasm": "sha256-H9BskybN5vZZ32O7KNwb3ZC6E2b7OLL5HuO4ms+W5Uk=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-tcWHPAX9dY5dLXFQeY0ATiw07MJzHVIV23I2CmcpA40=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-BSsNhgPOSpJ0pm4UHDmJlB7uEhZvg7vBUAstlqNSlQs=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-LYJGTqka6p2RaQhwjm0nbX5muzjO6rM8oTE9uoUmGBs=",
