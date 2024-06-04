@@ -1,39 +1,73 @@
 ﻿@inherits LayoutComponentBase
 @inject HttpClient Http
+@inject  NavigationManager Nav
 
 <nav class="px-2 d-block bg-secondary sticky-top text-white">
     <span>Font Size: @FontSize</span>
-    <button @onclick="IncreaseSize" class="btn btn-dark">+</button>
-    <button @onclick="DecreaseSize" class="btn btn-dark">-</button>
-    <span class="mx-2">Theme:</span>
-    <select class="form-select w-auto d-inline text-white bg-secondary" @bind="@Background">
+    <button @onclick="IncreaseSize" class="btn btn-dark shadow-none">+</button>
+    <button @onclick="DecreaseSize" class="btn btn-dark shadow-none">-</button>
+    <select class="form-select w-auto d-inline text-white bg-secondary ms-2" @bind="@Background">
         <option value="">Light</option>
         <option value="backgroundPaper">Paper</option>
         <option value="backgroundDark">Dark</option>
     </select>
+
+    <select class="form-select w-auto d-inline text-white bg-secondary ms-2" @bind="@Language" @bind:after="LanguageSelect">
+        <option value="EN">
+            EN
+        </option>
+        <option value="RU">
+            Ru
+        </option>
+    </select>
 </nav>
 <div class="@Background" style="font-size: @FontSizeString">
+
     @Body
 </div>
 
 @code
 {
-    public string FontSizeString { get; set; } = "15pt";
+    public string FontSizeString { get; set; } = "12pt";
     public string Background { get; set; } = "";
-    public int FontSize { get; set; } = 15;
+    public int FontSize { get; set; } = 12;
+    public string Language { get; set; } = "EN";
+
     public void IncreaseSize()
     {
         FontSize++;
         FontSizeString = $"{FontSize}pt";
     }
+
     public void DecreaseSize()
     {
         FontSize--;
         FontSizeString = $"{FontSize}pt";
     }
 
+    public void LanguageSelect()
+    {
+        if (Language == "RU")
+        {
+            Nav.NavigateTo("/ru");
+        }
+        else
+        {
+            Nav.NavigateTo("/en");
+        }
+    }
+
     protected override async Task OnInitializedAsync()
     {
+
+        if (Nav.Uri[^2..].Contains("en"))
+        {
+            Language = "EN";
+        }
+        else if(Nav.Uri[^2..].Contains("ru"))
+        {
+            Language = "RU";
+        }
         await base.OnInitializedAsync();
     }
 }
