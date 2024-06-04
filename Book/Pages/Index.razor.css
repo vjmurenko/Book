@@ -36,12 +36,3 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal {
 div.WordSection1 {
     page: WordSection1;
 }
-
-.backgroundDark{
-    color: white;
-    background-color: black;
-}
-
-.backgroundPaper{
-    background-color: #d9af6e !important;
-}
