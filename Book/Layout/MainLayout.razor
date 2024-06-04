@@ -1,18 +1,17 @@
 ﻿@inherits LayoutComponentBase
 @inject HttpClient Http
 
-<nav class="px-2 d-block @Background" >
+<nav class="px-2 d-block bg-secondary sticky-top text-white">
     <span>Font Size: @FontSize</span>
-    <button @onclick="IncreaseSize" class="btn btn-primary">+</button>
-    <button @onclick="DecreaseSize" class="btn btn-primary">-</button>
-    <span class="mx-2">Background:</span>
-    <select class="form-select w-auto d-inline @Background" @bind="@Background">
+    <button @onclick="IncreaseSize" class="btn btn-dark">+</button>
+    <button @onclick="DecreaseSize" class="btn btn-dark">-</button>
+    <span class="mx-2">Theme:</span>
+    <select class="form-select w-auto d-inline text-white bg-secondary" @bind="@Background">
         <option value="">Light</option>
         <option value="backgroundPaper">Paper</option>
         <option value="backgroundDark">Dark</option>
     </select>
 </nav>
-
 <div class="@Background" style="font-size: @FontSizeString">
     @Body
 </div>
