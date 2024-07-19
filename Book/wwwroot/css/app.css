@@ -91,8 +91,8 @@
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     scale: var(--blazor-load-percentage, 0%) 100%;
     transform-origin: left top;
-    animation: rainbow 2s linear infinite;
-    transition: scale ease-out 0.5s;
+    animation: rainbow 4s linear infinite;
+    transition: scale linear;
 }
 
 @keyframes rainbow {
@@ -100,7 +100,7 @@
         background-position: 0 0;
     }
     100% {
-        background-position: -200% 0; /* Adjust based on desired animation speed */
+        background-position: -300% 0; /* Adjust based on desired animation speed */
     }
 }
 .loading-progress-text {
