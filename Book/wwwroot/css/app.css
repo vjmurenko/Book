@@ -75,6 +75,45 @@
         content: var(--blazor-load-percentage-text, "Loading");
     }
 
+.linear-progress {
+    border: 1px solid blue;
+    width: 50vw;
+    margin: 20% auto;
+    height: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.linear-progress:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    scale: var(--blazor-load-percentage, 0%) 100%;
+    transform-origin: left top;
+    animation: rainbow 2s linear infinite;
+    transition: scale ease-out 0.5s;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -200% 0; /* Adjust based on desired animation speed */
+    }
+}
+.loading-progress-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+.loading-progress-text:after {
+    content: var(--blazor-load-percentage-text, "Loading");
+}
+
 code {
     color: #c02d76;
 }
