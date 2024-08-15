@@ -6,3 +6,11 @@
 .backgroundPaper{
     background-color: #b7ad2e2e;
 }
+
+
+nav {
+    font-size: 10pt;
+}
+nav *{
+    font-size:10pt;
+}

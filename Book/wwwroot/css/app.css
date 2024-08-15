@@ -76,7 +76,7 @@
     }
 
 .linear-progress {
-    border: 1px solid blue;
+    border: 1px solid gray;
     width: 50vw;
     margin: 20% auto;
     height: 1rem;
@@ -88,7 +88,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-color: gray;
     scale: var(--blazor-load-percentage, 0%) 100%;
     transform-origin: left top;
     animation: rainbow 4s linear infinite;

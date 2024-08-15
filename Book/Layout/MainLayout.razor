@@ -2,25 +2,38 @@
 @inject HttpClient Http
 @inject  NavigationManager Nav
 
-<nav class="px-2 d-block bg-secondary sticky-top text-white">
-    <span>Font Size: @FontSize</span>
-    <button @onclick="IncreaseSize" class="btn btn-dark shadow-none">+</button>
-    <button @onclick="DecreaseSize" class="btn btn-dark shadow-none">-</button>
-    <select class="form-select w-auto d-inline text-white bg-secondary ms-2" @bind="@Background">
-        <option value="">Light</option>
-        <option value="backgroundPaper">Paper</option>
-        <option value="backgroundDark">Dark</option>
-    </select>
+<nav class="ps-2 d-block bg-secondary sticky-top text-white d-flex @(ShowNavBar ? "" : "d-none")">
+    <div>
+        <span>Font: @FontSize</span>
+        <button @onclick="IncreaseSize" class="btn btn-dark shadow-none">+</button>
+        <button @onclick="DecreaseSize" class="btn btn-dark shadow-none">-</button>
+        <select class="form-select w-auto d-inline text-white bg-secondary ms-2" @bind="@Background">
+            <option value="">Light</option>
+            <option value="backgroundPaper">Paper</option>
+            <option value="backgroundDark">Dark</option>
+        </select>
 
-    <select class="form-select w-auto d-inline text-white bg-secondary ms-2" @bind="@Language" @bind:after="LanguageSelect">
-        <option value="EN">
-            EN
-        </option>
-        <option value="RU">
-            Ru
-        </option>
-    </select>
+        <select class="form-select w-auto d-inline text-white bg-secondary ms-2" @bind="@Language" @bind:after="LanguageSelect">
+            <option value="EN">
+                EN
+            </option>
+            <option value="RU">
+                Ru
+            </option>
+        </select>
+    </div>
+         <button class="btn btn-dark ms-auto shadow-none" @onclick="() => ShowNavBar = false">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-vertical" viewBox="0 0 16 16">
+                 <path d="M8.354 14.854a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 13.293V2.707L6.354 3.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 2.707v10.586l1.146-1.147a.5.5 0 0 1 .708.708z" />
+             </svg>
+         </button>
+
+
 </nav>
+
+<button @onclick="() => ShowNavBar = true" class="d-block btn btn-secondary w-100 sticky-top @(ShowNavBar ? "d-none" : "")"></button>
+
+<br />
 <div class="@Background" style="font-size: @FontSizeString">
 
     @Body
@@ -32,6 +45,7 @@
     public string Background { get; set; } = "";
     public int FontSize { get; set; } = 12;
     public string Language { get; set; } = "EN";
+    public bool ShowNavBar { get; set; } = true;
 
     public void IncreaseSize()
     {
