@@ -7,6 +7,14 @@
 .backgroundPaper[b-pk5zeh9n0f]{
     background-color: #b7ad2e2e;
 }
+
+
+nav[b-pk5zeh9n0f] {
+    font-size: 10pt;
+}
+nav *[b-pk5zeh9n0f]{
+    font-size:10pt;
+}
 /* /Pages/En.razor.rz.scp.css */
 {
     font-family: "Cambria Math"
