@@ -33,13 +33,12 @@
 
 <button @onclick="() => ShowNavBar = true" class="d-block btn btn-secondary w-100 sticky-top @(ShowNavBar ? "d-none" : "")"></button>
 
-<br />
 <div class="@Background" style="font-size: @FontSizeString">
 
     @Body
 </div>
 
-@code
+@code   
 {
     public string FontSizeString { get; set; } = "12pt";
     public string Background { get; set; } = "";
